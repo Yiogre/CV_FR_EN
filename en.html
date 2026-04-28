@@ -3,152 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yohan HOARAU - IT Infrastructure Portfolio</title>
+    <title>Yohan HOARAU - Architecture & Security Portfolio</title>
     <style>
-        :root {
-            --primary: #1a2a3a;
-            --secondary: #2980b9;
-            --accent: #27ae60;
-            --text-dark: #2c3e50;
-            --text-light: #546e7a;
-            --bg: #f0f2f5;
-        }
-        body { font-family: 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text-dark); margin: 0; line-height: 1.5; }
-        header { background: var(--primary); color: white; padding: 40px 20px; text-align: center; border-bottom: 5px solid var(--secondary); position: relative; }
-        .container { max-width: 1000px; margin: 20px auto; display: grid; grid-template-columns: 300px 1fr; gap: 20px; padding: 0 10px; }
-        @media (max-width: 850px) { .container { grid-template-columns: 1fr; } }
+        :root { --primary: #1a2a3a; --secondary: #2980b9; --accent: #27ae60; --text-dark: #2c3e50; --bg: #f0f2f5; }
+        body { font-family: 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text-dark); margin: 0; line-height: 1.6; }
         
-        section { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
-        h1 { margin: 0; font-size: 2.2rem; text-transform: uppercase; letter-spacing: 2px; }
-        h2 { color: var(--secondary); border-bottom: 2px solid #eee; padding-bottom: 8px; font-size: 1.3rem; text-transform: uppercase; margin-top: 0; }
-        h3 { color: var(--primary); margin-bottom: 5px; font-size: 1.1rem; }
+        .maintenance-banner { background: #fff3cd; color: #856404; text-align: center; padding: 10px; font-size: 0.9rem; border-bottom: 1px solid #ffeeba; font-weight: 500; }
+        header { background: var(--primary); color: white; padding: 50px 20px; text-align: center; border-bottom: 5px solid var(--secondary); }
+        h1 { margin: 0; font-size: 2.5rem; text-transform: uppercase; letter-spacing: 2px; }
+        .subtitle { font-size: 1.3rem; color: #64b5f6; margin-top: 10px; font-weight: bold; text-transform: uppercase; }
+        .pitch { max-width: 800px; margin: 20px auto 0; font-size: 1.1rem; color: #cfd8dc; font-weight: 300; }
         
-        .contact-info p { margin: 8px 0; font-size: 0.9rem; display: flex; align-items: center; gap: 10px; }
-        .skill-tag { display: inline-block; background: #e1f5fe; color: #01579b; padding: 4px 10px; border-radius: 15px; font-size: 0.85rem; margin: 3px; font-weight: 500; }
-        .devops-highlight { background: linear-gradient(135deg, #f0fff4 0%, #e6fffa 100%); border: 1px solid var(--accent); position: relative; }
-        .devops-highlight::before { content: "New"; position: absolute; top: 10px; right: 10px; background: var(--accent); color: white; font-size: 0.7rem; padding: 2px 8px; border-radius: 10px; }
+        .container { max-width: 1100px; margin: 30px auto; display: grid; grid-template-columns: 320px 1fr; gap: 25px; padding: 0 15px; }
+        section { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 25px; }
+        h2 { color: var(--secondary); border-bottom: 2px solid #eee; padding-bottom: 8px; font-size: 1.4rem; text-transform: uppercase; margin-top: 0; }
+        .skill-tag { display: inline-block; background: #e1f5fe; color: #01579b; padding: 5px 12px; border-radius: 15px; font-size: 0.85rem; margin: 4px 2px; font-weight: 600; border: 1px solid #b3e5fc; }
         
-        .exp-item, .edu-item { margin-bottom: 20px; border-left: 2px solid #eee; padding-left: 15px; }
-        .date { font-weight: bold; color: var(--secondary); font-size: 0.9rem; }
-        .soft-skills { font-style: italic; color: var(--text-light); }
-        .btn-github { background: var(--primary); color: white; text-decoration: none; padding: 10px 15px; border-radius: 5px; display: inline-block; margin-top: 10px; font-size: 0.9rem; }
-        .btn-github:hover { opacity: 0.9; }
-        
-        .lang-btn { position: absolute; top: 20px; right: 20px; background: white; color: var(--primary); padding: 5px 10px; border-radius: 5px; text-decoration: none; font-weight: bold; font-size: 0.9rem; }
+        .project-card { border-left: 4px solid var(--secondary); background: #fafafa; padding: 20px; border-radius: 0 8px 8px 0; margin-bottom: 20px; }
+        .date-badge { background: var(--secondary); color: white; padding: 4px 10px; border-radius: 4px; font-size: 0.85rem; font-weight: bold; }
+        .btn-github { background: var(--primary); color: white; text-decoration: none; padding: 10px 15px; border-radius: 5px; display: inline-block; margin-top: 15px; font-weight: bold; }
     </style>
 </head>
 <body>
 
+<div class="maintenance-banner">
+    ⚠️ <strong>Deployment Phase:</strong> This infrastructure is currently being commissioned. Advanced automation (n8n) and monitoring modules are being integrated.
+</div>
+
 <header>
-    <a href="index.html" class="lang-btn">🇫🇷 Français</a>
-    
-    <h1>Yohan HOARAU</h1>
-    <p style="font-size: 1.2rem; opacity: 0.9;">Secure Infrastructure Administrator (AIS)</p>
+    <a href="index.html" style="position: absolute; top: 20px; right: 20px; color: white; text-decoration: none; font-weight: bold;">🇫🇷 Français</a>
+    <h1>YOHAN HOARAU</h1>
+    <div class="subtitle">Looking for Work-Study (Master's Level) - Cloud Architecture, Systems & Security</div>
+    <p class="pitch">
+        Infrastructure Administrator in high-criticality environments (OIV). Specialized in "Security by Design" architectures: bare-metal virtualization, SDN segmentation, containerization, and Zero Trust models.
+    </p>
 </header>
 
 <div class="container">
     <aside>
-        <div style="text-align: center; margin-bottom: 20px;">
-            <img src="photo.png" alt="Yohan HOARAU" style="width: 150px; height: 150px; border-radius: 50%; border: 4px solid var(--secondary); object-fit: cover;">
-        </div>
-
-        <section class="contact-info">
+        <section>
             <h2>Contact</h2>
-            <p>📞 (+262) 6 92 72 47 30</p>
+            <p>📞 +33 6 92 72 47 30</p>
             <p>📧 yohan.hoar@gmail.com</p>
-            <p>📍 La Possession, Reunion Island (97419)</p>
-            <p>🚗 Driving License (B & AM)</p>
+            <p>📍 La Possession, 97419</p>
+            <p>📁 <a href="https://github.com/Yiogre" target="_blank" style="color: var(--secondary);">GitHub Profile</a></p>
         </section>
-
         <section>
-            <h2>Languages</h2>
-            <p><strong>French:</strong> Native</p>
-            <p><strong>English:</strong> B2 Level (TOEFL certified)</p>
-        </section>
-
-        <section>
-            <h2>Soft Skills</h2>
-            <p class="soft-skills">Detail-oriented, Analytical mindset, Team player</p>
-        </section>
-
-        <section>
-            <h2>Hobbies</h2>
-            <p>Video games, Airsoft, Reading</p>
+            <h2>Skills</h2>
+            <h3>Systems & Virtualization</h3>
+            <span class="skill-tag">Windows Server</span><span class="skill-tag">Linux (Debian)</span><span class="skill-tag">Proxmox VE</span>
+            <h3>Cloud & Automation</h3>
+            <span class="skill-tag">Docker / K3s</span><span class="skill-tag">GitHub Actions</span><span class="skill-tag">Terraform / Ansible</span>
+            <h3>Network & Security</h3>
+            <span class="skill-tag">Zero Trust (Authentik)</span><span class="skill-tag">SDN (OpenWrt)</span><span class="skill-tag">pfSense / WAF</span>
         </section>
     </aside>
 
     <main>
-        <section class="devops-highlight">
-            <h2>🚀 Cloud & DevOps Expertise</h2>
-            <h3>Automated CI/CD Pipeline</h3>
-            <p>Implemented a modern infrastructure for a financial API:</p>
-            <div style="margin-bottom: 15px;">
-                <span class="skill-tag">Docker</span>
-                <span class="skill-tag">GitHub Actions</span>
-                <span class="skill-tag">Render</span>
-                <span class="skill-tag">Pino Logging</span>
-                <span class="skill-tag">UptimeRobot</span>
-            </div>
-            <ul>
-                <li>Optimized <strong>Docker Multi-stage</strong> builds (Non-root security).</li>
-                <li>Automated testing and security audits via <strong>CI/CD</strong>.</li>
-                <li>Proactive availability monitoring (Health Checks).</li>
-            </ul>
-            <a href="https://github.com/Yiogre/devops-lesson-api" class="btn-github">📁 View GitHub Repository</a>
-        </section>
-
-        <section>
-            <h2>Technical Skills</h2>
-            
-            <h3>Systems & Architecture</h3>
-            <p>Server administration, virtualized infrastructure management, maintaining operational conditions (MCO) for servers and workstations.</p>
-            
-            <h3>Networks & Security</h3>
-            <p>Active Directory, DNS, IP Addressing, Implementation of backup and recovery policies. Hardware maintenance (cabling, switches).</p>
-            
-            <h3>Documentation & IT Management</h3>
-            <p>Drafting technical procedures, intervention reports, and architecture diagrams. Asset Management and IT support using <strong>ITSM ticketing tools</strong>.</p>
-        </section>
-
         <section>
             <h2>Professional Experience</h2>
-            <div class="exp-item">
-                <span class="date">July 2023 - August 2023</span>
-                <h3>IT Support Intern | ACE Gestion Informatique</h3>
-                <p>Provided IT support and hardware maintenance in a corporate environment (6 weeks).</p>
-            </div>
-            <div class="exp-item">
-                <span class="date">June 2022</span>
-                <h3>Safety & Prevention Intern | ENGIE (Port Ouest)</h3>
-                <p>Gained awareness of industrial safety standards and protocols.</p>
+            <div style="margin-bottom: 30px;">
+                <span class="date-badge">Apr 2026 - Jun 2026</span>
+                <h3>Secure Infrastructure Administrator (Intern)</h3>
+                <p style="color: var(--secondary);">EDF Reunion</p>
+                <ul>
+                    <li><strong>IT/OT Deployment:</strong> Hardening and configuration of industrial terminals under strict regulatory compliance.</li>
+                    <li><strong>Physical Infrastructure:</strong> Datacenter rack management, cabling, and strict access mapping.</li>
+                    <li><strong>UEM/MDM:</strong> Fleet enrollment and custom hardware assembly for service continuity.</li>
+                    <li><strong>NOC Supervision:</strong> Deployment of control stations for proactive network monitoring.</li>
+                </ul>
             </div>
         </section>
 
         <section>
-            <h2>Education</h2>
-            <div class="edu-item">
-                <span class="date">2026 (Ongoing)</span>
-                <h3>Secure Infrastructure Administrator (AIS)</h3>
-                <p>Ariane Formation, Savannah</p>
+            <h2>Infrastructure Projects & R&D</h2>
+            <div class="project-card">
+                <h3>Homelab R&D: Zero Trust Architecture</h3>
+                <p>Design and deployment of a "mini-datacenter" based on <em>Security by Design</em> principles and strict network flow isolation.</p>
+                <h4>1. SDN & Bare-Metal Virtualization</h4>
+                <p>Proxmox hypervisor with virtualized routing (OpenWrt). Strict VLAN segmentation (Management, DMZ, LAN) within the vSwitch.</p>
+                <h4>2. Identity & Perimeter Security</h4>
+                <p>Zero Trust implementation via Cloudflare (WAF). Self-hosted SSO portal (Authentik) enforcing Multi-Factor Authentication (MFA) at Layer 7.</p>
+                <h4>3. Cloud Native</h4>
+                <p>Micro-services hosting via isolated containers (Docker/K3s). Dynamic SSL termination (Traefik) and automated SIEM logging.</p>
             </div>
-            <div class="edu-item">
-                <span class="date">2024 - 2025</span>
-                <h3>Higher IT Systems and Networks Technician (TSSR)</h3>
-                <p>AFPA Niort (Graduated)</p>
-            </div>
-            <div class="edu-item">
-                <span class="date">2022 - 2024</span>
-                <h3>IT Assistance Technician (TAI)</h3>
-                <p>RSMA-R (Graduated)</p>
-            </div>
-            <div class="edu-item">
-                <span class="date">2021</span>
-                <h3>High School Diploma in Technology (STL)</h3>
-                <p>Specialized in Microbiology (Graduated with honors)</p>
-            </div>
+            
+            <section class="project-card">
+                <h3>Roadmap & Future Evolution</h3>
+                <ul>
+                    <li><strong>In Progress:</strong> Finalizing application integration into the Authentik SSO portal.</li>
+                    <li><strong>Upcoming:</strong> Finalizing Frontend zone and deploying the interactive CV.</li>
+                    <li><strong>Final Phase:</strong> Implementing n8n automation engine and advanced real-time monitoring.</li>
+                </ul>
+            </section>
         </section>
     </main>
 </div>
-
 </body>
 </html>
